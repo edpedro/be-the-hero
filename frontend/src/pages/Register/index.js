@@ -35,6 +35,7 @@ export default function Register() {
             history.push('/')
         } catch (error) {
             alert('Erro no cadastro, tente novamente')
+            console.log(error)
         }
     }
 
