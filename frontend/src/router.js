@@ -7,6 +7,7 @@ import Profile from './pages/Profile'
 import NewIncident from './pages/NewIncident'
 
 import { isAuthenticated } from './authentication/auth'
+
 //Autenticação
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={props =>
@@ -14,6 +15,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
             <Component {...props} />
         ) : (
                 <Redirect to={{ pathname: '/', state: { from: props.location } }} />
+                
             )
     }
     />
